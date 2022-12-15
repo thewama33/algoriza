@@ -36,9 +36,9 @@ void main() async {
                       darkTheme: appThemeState.isDarkModeEnabled
                           ? ThemeData.dark()
                           : ThemeData.light(),
-                      themeMode: appThemeState.isDarkModeEnabled
-                          ? ThemeMode.dark
-                          : ThemeMode.light,
+                      // themeMode: appThemeState.isDarkModeEnabled
+                      //     ? ThemeMode.dark
+                      //     : ThemeMode.light,
                       routes: AppRoutes.routes,
                       initialRoute: AlgorizaDemoApp.routeName);
                 },

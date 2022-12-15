@@ -7,7 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../base/base_app_bar.dart';
-import 'components/error_widget.dart';
+import '../base/error_widget.dart';
 import 'components/loading.dart';
 
 class HomePage extends StatelessWidget {

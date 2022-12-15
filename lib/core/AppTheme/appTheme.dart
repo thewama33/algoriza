@@ -38,7 +38,7 @@ class AppTheme {
         fontWeight: FontWeight.bold,
         color: Colors.white,
       ),
-      bodyText2: TextStyle(
+      bodyText2: const TextStyle(
         color: Colors.white,
       ),
     ),

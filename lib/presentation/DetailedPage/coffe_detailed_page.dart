@@ -28,46 +28,44 @@ class _CoffeDetailedPageState extends State<CoffeDetailedPage> {
             child: SizedBox(
               child: Column(
                 children: [
-                  ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: CachedNetworkImage(
-                        imageUrl: widget.model!.image!,
-                        fit: BoxFit.cover,
-                      )),
+                  Hero(
+                    tag: widget.model!.id!,
+                    child: AspectRatio(
+                      aspectRatio: 1.08,
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: CachedNetworkImage(
+                            imageUrl: widget.model!.image!,
+                            fit: BoxFit.cover,
+                          )),
+                    ),
+                  ),
                   ListTile(
                     leading: Icon(Icons.title),
-                    title: Text(
-                      widget.model!.title!,
-                      style: Theme.of(context).textTheme.bodyText1!
-                    ),
-                    subtitle: Text(
-                      widget.model!.description!,
-                      overflow: isOverFlow ? TextOverflow.ellipsis : null,
-                      style:  Theme.of(context).textTheme.bodyText2!
-                    ),
+                    title: Text(widget.model!.title!,
+                        style: Theme.of(context).textTheme.bodyText1!),
+                    subtitle: Text(widget.model!.description!,
+                        overflow: isOverFlow ? TextOverflow.ellipsis : null,
+                        style: Theme.of(context).textTheme.bodyText2!),
                   ),
                   Align(
                     alignment: Alignment.bottomRight,
                     child: TextButton(
-                        onPressed: () {
-                          setState(() {
-                            isOverFlow = !isOverFlow;
-                          });
-                        },
-                        child: const Text("See More")),
+                        onPressed: () {}, child: const Text("See More")),
                   ),
                   ExpansionTile(
-                    title:  Text("Ingredients",style: Theme.of(context).textTheme.bodyText1!),
+                    title: Text("Ingredients",
+                        style: Theme.of(context).textTheme.bodyText1!),
                     leading: const Icon(Icons.coffee),
-                     
                     children: [
                       ...List.generate(
-                          widget.model!.ingredients!.length,
-                          (index) => RPadding(
-                                padding: REdgeInsets.all(8.0.r),
-                                child: Text(widget.model!.ingredients![index],style: Theme.of(context).textTheme.bodyText2),),
-                              ),
-
+                        widget.model!.ingredients!.length,
+                        (index) => RPadding(
+                          padding: REdgeInsets.all(8.0.r),
+                          child: Text(widget.model!.ingredients![index],
+                              style: Theme.of(context).textTheme.bodyText2),
+                        ),
+                      ),
                     ],
                   )
                 ],

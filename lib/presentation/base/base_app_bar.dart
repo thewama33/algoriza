@@ -9,7 +9,7 @@ AppBar buildAppBar() => AppBar(
       actions: [
         Consumer(
           builder: (context, state, child) {
-            final appThemeState = state.read(appThemeStateNotifier);
+            final appThemeState = state.watch(appThemeStateNotifier);
             return Switch(
               value: appThemeState.isDarkModeEnabled,
               onChanged: (enabled) {
