@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/appStrings.dart';
-import '../../providers/dummy/themeProvider.dart';
+import '../../providers/ThemeProvider/themeProvider.dart';
 
 AppBar buildAppBar() => AppBar(
       title: Text(AppStrings.appTitle),

@@ -9,12 +9,10 @@ import '../../../core/constants.dart';
 
 class CoffeErrorWidget extends StatelessWidget {
   String? err;
-   CoffeErrorWidget({
+  CoffeErrorWidget({
     Key? key,
     this.err,
   }) : super(key: key);
-
-  
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +21,13 @@ class CoffeErrorWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            width: 100.w,
-            height: 100.h,
-            child: CachedNetworkImage(imageUrl: AppConstants.errImage)),
-          Text("Error Happend : $err"),
+              width: 100.w,
+              height: 100.h,
+              child: CachedNetworkImage(imageUrl: AppConstants.errImage)),
+          Text(
+            "$err",
+            style: Theme.of(context).textTheme.bodyText1,
+          ),
         ],
       ),
     );

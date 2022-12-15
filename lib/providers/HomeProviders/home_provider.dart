@@ -27,7 +27,7 @@ class CoffeeProvider extends StateNotifier<CoffeState> {
         return itemModel;
       }
     } on DioError catch (error) {
-      state = CoffeError(message: error.message);
+      state = CoffeError(message: dioErrorMessage(error));
       printError(error.message);
     }
 

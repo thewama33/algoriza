@@ -8,7 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/AppTheme/appTheme.dart';
 import 'core/appRoutes.dart';
 import 'core/appStrings.dart';
-import 'providers/dummy/themeProvider.dart';
+import 'providers/ThemeProvider/themeProvider.dart';
 import 'services/local/persistence.dart';
 
 void main() async {
