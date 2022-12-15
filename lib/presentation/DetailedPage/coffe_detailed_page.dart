@@ -51,7 +51,12 @@ class _CoffeDetailedPageState extends State<CoffeDetailedPage> {
                   Align(
                     alignment: Alignment.bottomRight,
                     child: TextButton(
-                        onPressed: () {}, child: const Text("See More")),
+                        onPressed: () {
+                          setState(() {
+                            isOverFlow = !isOverFlow;
+                          });
+                        },
+                        child: const Text("See More")),
                   ),
                   ExpansionTile(
                     title: Text("Ingredients",
